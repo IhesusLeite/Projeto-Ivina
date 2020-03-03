@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>
+    <style media="screen">
+	
+	.plano{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    
+   }
+    .menu{
+	  float: right;
+	  line-height: 100px;
+	}
+	.menu a{
+	  color: black;
+	  text-transform: uppercase;
+	  text-decoration: none;
+	  padding:10px;
+	  transition: 0.4s;
+	  font-family: montserrat;
+	  font-size: 20px;
+	  outline: none;
+	}
+
+	.show-menu-btn,.hide-menu-btn{
+	  transition: 0.4s;
+	  font-size: 30px;
+	  cursor: pointer;
+	  display: none;
+	}
+	.show-menu-btn{
+	  float: right;
+	}
+	.show-menu-btn i{
+	  line-height: 100px;
+	}
+	.menu a:hover{
+	  color: #e67e22;
+	  text-decoration: none;
+	}
+    @media screen and (max-width:40%) {
+	  .show-menu-btn,.hide-menu-btn{
+	    display: block;
+	  }
+	  .menu{
+	    position: fixed;
+	    width: 100%;
+	    height: 100px;
+
+
+	    right: -100%;
+	    top: 0;
+	    text-align: center;
+
+	    line-height: normal;
+	    transition: 0.7s;
+	  }
+
+	}
+	.login {
+    width: 75%;
+    height: 80%;
+    border: 2px solid white;
+    border-radius: 80px 0px 80px 0px;
+    color: #fff;
+    background-color:#CF3B8B;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px; 
+   }
+	.div_teste{
+       width:700px;
+       height:500px;
+       position:absolute;
+       z-index:100;
+       top:50px;
+       margin-left:300px;
+	}
+	#a{
+      margin-left: 10px;
+
+	}
+	
+
+   .usuario {
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 112px;
+   }
+
+	}
+	h1 {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+   }
+   
+   .login p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+   }
+   
+   .login input {
+    width: 100%;
+    margin-bottom: 21px;
+     
+   }
+
+   .radio{
+	   display: inline;
+   }
+
+   
+
+    .login-form h1{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+	#textcad{
+		background-color: white;
+		text-decoration: underline;
+	}
+    </style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
+	</head>
+  <body class="plano">
+        <div class="header">
+            <ul class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="produtos.html">Pedidos</a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+	</div>
+	
+	<div class="login">
+		<img src="login.png" class="usuario" width="100" height="100" alt="">
+  	 <h1>Cadastro de Pedido</h1>
+   <form>	
+	
+    
+		<form action="salvar.php" method="POST" class="login-form">	
+		  <div class="form-row">
+
+			<div class="form-group col-md-5">
+				<label>Cliente</label>
+				<input type="text" class="form-control" id="tempo" name="tempo" placeholder="Digite seu nome">
+			  </div>
+		
+				<div class="form-group col-md-4">
+					<label>Pedido</label>
+				 <select name="nome" id="nome" class="form-control">
+					 <option value="">Bolo de Pote</option>
+					 <option value="">Bolo de Aniversário</option>
+					 <option value="">Cone de Chocolate</option>
+					 <option value="">Salgadinho de Aniversário</option>
+					 <option value="">Doces de Aniversário</option>
+					 <option value="">Canudinho de Aniversário</option>
+					 <option value="">brigadeiro de Aniversário</option>
+
+					 </option>
+				 </select>
+				</div>
+				
+				<div class="form-group col-md-4">
+					<label>Sobores</label>
+				 <select name="nome" id="nome" class="form-control">
+					 <option value="">Chocolate com Morango</option>
+					 <option value="">Chocolate Branco</option>
+					 <option value="">Leite Condensado</option>
+					 <option value="">Brawne</option>
+					 <option value="">Banana</option>
+					 
+				 </select>
+				</div>
+				<div class="form-group col-md-4">
+				  <label>Data de Entrega(opcional)</label>
+				  <input type="date" class="form-control" id="tempo" name="tempo" placeholder="Data da entrega">
+				</div>
+		
+		
+				<div class="form-group col-md-2">
+					<label>Quantidade</label>
+				  <input type="number" class="form-control" id="quant" name="quant" ><br>
+				  </div>
+
+				  <div class="form-group col-md-5">
+					<label>Localização</label>
+					<input type="text" class="form-control" id="tempo" name="tempo" placeholder="Digite seu Endereço">
+				  </div>
+					  
+				  <div class="radio">
+				  <div class="form-check">
+					<input  class="form-check-input"type="radio"  name="radio" >
+					
+					<label >Fazer a Entrega</label>
+					
+						
+					
+
+				  </div>
+
+				  <div class="form-check">
+					<input class="form-check-input" type="radio"  name="radio" >
+					<label class="form-check-label" for="defaultCheck2">
+					  Vem Buscar
+					</label>
+
+				  </div>
+				</div>
+				  
+				  	
+				  <div class="input-group-append" >
+					<label class="input-group-text">R$</label>
+					<label class="input-group-text">0.00</label>
+				  </div>
+				  <div class="input-group">
+				  <div class="form-group col-md-3">
+					  </div>
+					  
+				<button type="button" class="btn btn-success" value="Salvar" class="form-control">Confirma pedido</button>
+				</div>
+			</div>
+		</form>
+	</div>
+  </body>
+</html>

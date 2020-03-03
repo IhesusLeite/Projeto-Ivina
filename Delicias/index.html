@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <style media="screen">
+    *{
+      padding: 0px;
+      text-decoration: none;
+      font-family: montserrat;
+      box-sizing: border-box;
+      background-color:#FEC1E2;
+      margin: 0px;
+    }
+    .menu{
+	  float: right;
+	  line-height: 100px;
+	}
+	.menu a{
+	  color: black;
+	  text-transform: uppercase;
+	  text-decoration: none;
+	  padding:10px;
+	  transition: 0.4s;
+	  font-family: montserrat;
+	  font-size: 20px;
+	  outline: none;
+	}
+
+	.show-menu-btn,.hide-menu-btn{
+	  transition: 0.4s;
+	  font-size: 30px;
+	  cursor: pointer;
+	  display: none;
+	}
+	.show-menu-btn{
+	  float: right;
+	}
+	.show-menu-btn i{
+	  line-height: 100px;
+	}
+	.menu a:hover{
+	  color: #e67e22;
+	  text-decoration: none;
+	}
+    @media screen and (max-width:40%) {
+	  .show-menu-btn,.hide-menu-btn{
+	    display: block;
+	  }
+	  .menu{
+	    position: fixed;
+	    width: 100%;
+	    height: 100px;
+
+
+	    right: -100%;
+	    top: 0;
+	    text-align: center;
+
+	    line-height: normal;
+	    transition: 0.7s;
+	  }
+
+	}
+	.div_teste{
+       width:700px;
+       height:500px;
+       position:absolute;
+       z-index:100;
+       top:50px;
+       margin-left:300px;
+}
+a{
+  text-decoration: none;
+  background-color: none;
+}
+#conteudo{
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top:80%;
+}
+.cont img{
+    width: 300px;
+    height: 200px;
+    
+}
+.cont{
+    width: 300px;
+    height: 200px;
+    float: left;
+    position: relative;
+    left:20%;
+    margin-left: 12px;
+}
+#bemvindo{
+    position: absolute;
+	width: 100%;
+	height: 250px;
+	background-color: #302F2F;
+	top: 100px;
+	color: white;
+
+}
+    </style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+        <div class="header">
+            <ul class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="produtos.html">Pedidos</a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+    </div>
+    <div id="bemvindo">
+        <h1 align="center" style="background-color: #302F2F;"><em style="background-color: #302F2F;">Seja Bem Vindo...</em></h1><br>
+		<h2 align="center" style="background-color: #302F2F;"><a href="https://www.instagram.com/deliciasdaivina/" style="background-color:#302F2F; color: white;">@ D E L I C I A S D A I V I N A</a><br>Adoçando sua vida desde 2017🍰😋
+      Trabalhamos com uma diversidade de sobremesas para adoçar​ ainda mais suas festas e eventos!</h2>
+		
+	</div>
+    <div id="conteudo">
+      <div class="cont">
+          <img src="">
+          <h2></h2>
+      </div>
+      
+  
+      <div class="cont">
+          <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/e35/75640837_446833689589452_6265012083286306418_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=100&_nc_ohc=7jwfxzzrEPMAX91P1L-&oh=cdfd2fe5d6c2c2a727f9f27219f00109&oe=5E9B2751">	
+          <h2>Bolos de Aniversário</h2>
+      </div>
+  
+      <div class="cont">
+          <img src="img/1.jpg">
+          <h2>Todos os serviços possiveis para você ter um lindo sorriso pro resto da vida</h2>
+      </div>
+  </div>
+  </body>
+</html>
