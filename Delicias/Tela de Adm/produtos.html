@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Delicias Da Ivina</title>
+    <style media="screen">
+	
+	body{
+    margin: 0;
+	padding: 0;
+	background-image: url(t1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    
+   }
+    .menu{
+	  float: right;
+	  line-height: 100px;
+	}
+	.menu a{
+	  color: black;
+	  text-transform: uppercase;
+	  text-decoration: none;
+	  padding:10px;
+	  transition: 0.4s;
+	  font-family: montserrat;
+	  font-size: 20px;
+	  outline: none;
+	}
+
+	.show-menu-btn,.hide-menu-btn{
+	  transition: 0.4s;
+	  font-size: 30px;
+	  cursor: pointer;
+	  display: none;
+	}
+	.show-menu-btn{
+	  float: right;
+	}
+	.show-menu-btn i{
+	  line-height: 100px;
+	}
+	.menu a:hover{
+	  color: #e67e22;
+	  text-decoration: none;
+	}
+    @media screen and (max-width:40%) {
+	  .show-menu-btn,.hide-menu-btn{
+	    display: block;
+	  }
+	  .menu{
+	    position: fixed;
+	    width: 100%;
+	    height: 100px;
+
+
+	    right: -100%;
+	    top: 0;
+	    text-align: center;
+
+	    line-height: normal;
+	    transition: 0.7s;
+	  }
+
+	}
+	.pedido {
+    width: 98%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 80px 0px 80px 0px;
+    color: #fff;
+    background-color:rgba(207, 59, 138, 0.911);
+    top: 65%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px; 
+   }
+
+   .cliente {
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 112px;
+   }
+   
+   .linha{
+	   
+	   background-color: white;
+	   height: 2px;
+	   width: 100%;
+	   top: 5%;
+   }
+
+   .lista{
+	background-color:rgba(207, 59, 138, 0.911);
+   }
+
+	.tabela{
+		text-align: center;
+	}
+
+    </style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	</head>
+  <body>
+        <div class="header">
+            <ul class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="produtos.html">Pedidos</a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+	</div>
+	
+	<form>
+	<div class="pedido">
+		<img src="login.png" class="cliente" width="100" height="100" alt="">
+	   <h1>Lista dos Pedidos</h1>
+	   <table>
+		<div class="container">
+			<div class="tabela">
+			<table>
+				 <thead>
+					
+						<thead>
+						  <tr>
+							<th scope="col">#</th>
+							<th scope="col">cliente</th>
+							<th scope="col">Pedido</th>
+							<th scope="col">Sabor</th>
+							<th scope="col">Data de entrega</th>
+							<th scope="col">Horrario</th>
+							<th scope="col">Quantidade</th>
+							<th scope="col">Bairro</th>
+							<th scope="col">rua</th>
+							<th scope="col">N°</th>
+							<th scope="col">Telefone</th>
+							<th scope="col">Preço</th>
+						  </tr>
+				 </thead>
+				 
+				<thead>
+					 <tr>
+						 <td>001</td>
+						 <td>João Preto</td>
+						 <td>Bolo de pote</td>
+						 <td>Chocolate</td>
+						 <td>02/03/2020</td>
+						 <td>13PM</td>
+						 <td>5</td>
+						 <td>Sao migual</td>
+						 <td>joao asfalto</td>
+						 <td>36</td>
+						 <td>4002-8922 é o funk...</td>
+						 <td>R$ 25</td>
+					 </tr>
+				</thead>
+
+				<thead>
+					 <tr>
+						<td>002</td>
+						 <td>Igao menn</td>
+						 <td>bolo vulcao</td>
+						 <td>morango</td>
+						 <td>08/03/2020</td>
+						 <td>17PM</td>
+						 <td>2</td>
+						 <td>Brejo</td>
+						 <td>Pedro costela</td>
+						 <td>50</td>
+						 <td>9666-9666</td>
+						 <td>R$ 80</td>
+					 </tr>
+				</thead>
+
+					 
+				 
+			 </table> 
+			</div>      
+		 </div>
+	   </table>
+  </body>
+</html>
