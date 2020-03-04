@@ -68,7 +68,7 @@
 	}
 	.pedido {
     width: 75%;
-    height: 80%;
+    height: 70%;
     border: 2px solid white;
     border-radius: 80px 0px 80px 0px;
     color: #fff;
@@ -169,19 +169,20 @@
 
 			<div class="form-group col-md-5">
 				<label>Cliente</label>
-				<input type="text" class="form-control" id="tempo" name="tempo" placeholder="Digite seu nome">
+				<input type="text" class="form-control" id="nomecliente" name="nomecliente" placeholder="Digite seu nome">
 			  </div>
 		
-				<div class="form-group col-md-4">
+				<div class="form-group col-md-3">
 					<label>Pedido</label>
-				 <select name="nome" id="nome" class="form-control">
-					 <option value="">Bolo de Pote</option>
-					 <option value="">Bolo de Aniversário</option>
-					 <option value="">Cone de Chocolate</option>
-					 <option value="">Salgadinho de Aniversário</option>
-					 <option value="">Doces de Aniversário</option>
-					 <option value="">Canudinho de Aniversário</option>
-					 <option value="">brigadeiro de Aniversário</option>
+				 <select id="nomepedido" name="nomepedido" class="form-control" >
+					 <option selected>Selecione...</option>
+					 <option value="1">Bolo de Pote</option>
+					 <option value="2">Bolo de Aniversário</option>
+					 <option value="3">Cone de Chocolate</option>
+					 <option value="4">Salgadinho de Aniversário</option>
+					 <option value="5">Doces de Aniversário</option>
+					 <option value="6">Canudinho de Aniversário</option>
+					 <option value="7">brigadeiro de Aniversário</option>
 
 					 </option>
 				 </select>
@@ -189,23 +190,24 @@
 				
 				<div class="form-group col-md-4">
 					<label>Sobores</label>
-				 <select name="nome" id="nome" class="form-control">
-					 <option value="">Chocolate com Morango</option>
-					 <option value="">Chocolate Branco</option>
-					 <option value="">Leite Condensado</option>
-					 <option value="">Brawne</option>
-					 <option value="">Banana</option>
+				 <select name="sabor" id="sabor" class="form-control">
+					 <option selected>Selecione...</option>
+					 <option value="1">Chocolate com Morango</option>
+					 <option value="2">Chocolate Branco</option>
+					 <option value="3">Leite Condensado</option>
+					 <option value="4">Brawne</option>
+					 <option value="5">Banana</option>
 					 
 				 </select>
 				</div>
 				<div class="form-group col-md-4">
 				  <label>Data de Entrega(opcional)</label>
-				  <input type="date" class="form-control" id="tempo" name="tempo" >
+				  <input type="date" class="form-control" id="data" name="data" >
 				</div>
 
 				<div class="form-group col-md-2">
 					<label>Horario</label>
-					<input type="time" class="form-control" id="tempo" name="tempo" >
+					<input type="time" class="form-control" id="hora" name="hora" >
 				  </div>
 
 				
@@ -213,34 +215,34 @@
 		
 				<div class="form-group col-md-2">
 					<label>Quantidade</label>
-					<input  class="form-control input-sm " placeholder="número" maxlength="2" pattern="[0-9]+$"/>
+					<input  class="form-control input-sm " placeholder="Número" maxlength="2" pattern="[0-9]+$" name="quant" id="quant">
 				  </div>
 
 			
 				  <div class="form-group col-md-4">
 					<label>Bairro</label>
-					<input type="text" class="form-control" id="tempo" name="tempo" placeholder="Digite seu Endereço">
+					<input type="text" class="form-control" id="nomebairro" name="nomebairro" placeholder="Digite seu Endereço">
 				  </div>
 
 				  <div class="form-group col-md-4">
 					<label>Rua</label>
-					<input type="text" class="form-control" id="tempo" name="tempo" placeholder="Digite seu Endereço">
+					<input type="text" class="form-control" id="nomerua" name="nomerua" placeholder="Digite seu Endereço">
 				  </div>
 
 				  <div class="form-group col-md-1">
 					<label>N°</label>
-					<input type="text" class="form-control" id="tempo" name="tempo" placeholder="N°">
+					<input type="text" class="form-control" id="numero" name="numero" placeholder="N°" maxlength="3" pattern="[0-9]+$">
 				  </div>
 
 				  <div class="form-group col-md-3">
 					<label for="phone">Telefone</label>
-					<input type="tel" class="form-control" id="tempo" name="tempo" placeholder="Telefone">
+					<input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone"  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
 				  </div>
 			
 					  
 				  <div class="radio">
 				  <div class="form-check">
-					<input  class="form-check-input"type="radio"  name="radio" >
+					<input  class="form-check-input"type="radio" id="opcao" name="opcao">
 					
 					<label >Fazer a Entrega</label>
 					
@@ -248,8 +250,8 @@
 				  </div>
 
 				  <div class="form-check">
-					<input class="form-check-input" type="radio"  name="radio" >
-					<label class="form-check-label" for="defaultCheck2">
+					<input class="form-check-input" type="radio" id="opcao" name="opcao" >
+					<label class="form-check-label" for="defaultCheck2" id="opcao" name="opcao">
 					  Vem Buscar
 					</label>
 
@@ -262,16 +264,9 @@
 		</div> 
 
 		  <div class="valor">
-				  <div class="input-group-append" >
-					<label class="input-group-text">R$</label>
-					<label class="input-group-text">0.00</label>
-				  </div>
-		  </div>
-				  <div class="input-group">
-				  <div class="form-group col-md-3">
-					  
-				
-			
+			<label>Valor R$</label>
+			<input type="text" class="form-control" id="valor" name="valor" disabled >
+		  </div>		
 		</form>
 	</div>
   </body>

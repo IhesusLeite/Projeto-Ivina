@@ -1,8 +1,18 @@
 <?php
     include_once("conexao.php");
-    $nome = $_POST['nome'];
-    $data = $_POST['tempo'];
+    
+    $cliente = $_POST['nomecliente'];
+    $pedido = $_POST['nomepedidido'];
+    $sabor = $_POST['sabor'];
+    $data = $_POST['data'];
+    $hora = $_POST['hora'];
     $quantidade = $_POST['quant'];
+    $bairro = $_POST['nomebairro'];
+    $rua = $_POST['nomerua'];
+    $numero = $_POST['numero'];
+    $telefone = $_POST['telefone'];
+    $opcao = $_POST['opcao'];
+
     
     $result = "INSERT INTO delicias(nome, tempo,quant) VALUES ('$nome','$tempo','$quantidade')";
     $resultado = mysqli_query($conn, $result);
