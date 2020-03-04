@@ -121,8 +121,14 @@
    }
 
    .valor{
-	   float: right;
+	   float:left;
+	   height: 50px;
+	   width: 100px;
 	   
+   }
+
+   .salvar{
+	   float:right;
    }
    
    
@@ -225,6 +231,11 @@
 					<label>N°</label>
 					<input type="text" class="form-control" id="tempo" name="tempo" placeholder="N°">
 				  </div>
+
+				  <div class="form-group col-md-3">
+					<label for="phone">Telefone</label>
+					<input type="tel" class="form-control" id="tempo" name="tempo" placeholder="Telefone">
+				  </div>
 			
 					  
 				  <div class="radio">
@@ -246,6 +257,9 @@
 				</div>
 				  
 		  </div>
+		  <div class="salvar"> 
+			<button type="button" class="btn btn-success" value="Salvar" class="form-control">Confirma pedido</button>
+		</div> 
 
 		  <div class="valor">
 				  <div class="input-group-append" >
@@ -256,9 +270,7 @@
 				  <div class="input-group">
 				  <div class="form-group col-md-3">
 					  
-					<div> 
-				<button type="button" class="btn btn-success" value="Salvar" class="form-control">Confirma pedido</button>
-			</div> 
+				
 			
 		</form>
 	</div>
