@@ -16,56 +16,36 @@
     height: 100%;
     
    }
-    .menu{
+    
+   .menu{
 	  float: right;
-	  line-height: 100px;
+	  background-color: rgb(233, 10, 129);
+	  border-radius: 0px 0px 400px 400px;	
+	  height: 10%;
+	  width: 19%;  
+	  text-align: center;
+	  
 	}
 	.menu a{
-	  color: black;
-	  text-transform: uppercase;
-	  text-decoration: none;
-	  padding:10px;
-	  transition: 0.4s;
-	  font-family: montserrat;
-	  font-size: 20px;
-	  outline: none;
+	  color: white;
+	  padding:15px;
+	  font-size: 22px;  
 	}
 
-	.show-menu-btn,.hide-menu-btn{
-	  transition: 0.4s;
-	  font-size: 30px;
-	  cursor: pointer;
-	  display: none;
-	}
-	.show-menu-btn{
-	  float: right;
-	}
-	.show-menu-btn i{
-	  line-height: 100px;
-	}
 	.menu a:hover{
-	  color: #e67e22;
+	  color: rgb(233, 10, 129);
 	  text-decoration: none;
 	}
     @media screen and (max-width:40%) {
 	  .show-menu-btn,.hide-menu-btn{
 	    display: block;
 	  }
-	  .menu{
-	    position: fixed;
-	    width: 100%;
-	    height: 100px;
-
-
-	    right: -100%;
-	    top: 0;
-	    text-align: center;
-
-	    line-height: normal;
-	    transition: 0.7s;
+	  .header{
+		height: auto;
 	  }
-
+	  
 	}
+
 	.pedido {
     width: 98%;
     height: 100%;
@@ -106,23 +86,22 @@
 
     </style>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+		
 	</head>
   <body>
-        <div class="header">
-            <ul class="menu">
+	<form>
+        <div class="pedido">
+            <div class="menu">
+				<ul>
                 <a href="index.html">Inicio</a>
                 <a href="produtos.html">Pedidos</a>
-                <label for="chk" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
-            </ul>
-        </div>
-	</div>
+           		 </ul>
+       		 </div>
 	
-	<form>
-	<div class="pedido">
+	
+	
 		<img src="login.png" class="cliente" width="100" height="100" alt="">
 	   <h1>Lista dos Pedidos</h1>
 	   <table>
@@ -162,7 +141,9 @@
 						 <td>36</td>
 						 <td>4002-8922 é o funk...</td>
 						 <td>R$ 25</td>
+						 <td><button style="width: 80px; height: 40px; background-color: red; border-color: red;">Excluir</button></td>
 					 </tr>
+					 
 				</thead>
 
 				<thead>
@@ -179,6 +160,7 @@
 						 <td>50</td>
 						 <td>9666-9666</td>
 						 <td>R$ 80</td>
+						<td><button style="width: 80px; height: 40px; background-color: red; border-color: red;">Excluir</button></td>
 					 </tr>
 				</thead>
 
