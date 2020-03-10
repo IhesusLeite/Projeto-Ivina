@@ -1,5 +1,5 @@
 <?php
-    include_once("conexao.php");
+    include_once 'conexao.php';
     
     $cliente = $_POST['nomecliente'];
     $pedido = $_POST['nomepedidido'];
@@ -12,22 +12,8 @@
     $numero = $_POST['numero'];
     $telefone = $_POST['telefone'];
     $opcao = $_POST['opcao'];
-
-    $result = "INSERT INTO `tbpedidos`(`ID`, `CLIENTE`, `PEDIDO`, `SABOR`, `DATA`, `QUANTIDADE`, `LOCALIZACAO`, `OPCAO`, `HORARIO`, `preco`) 
-                                VALUES (,$cliente,$pedido,$sabor,$data,$quantidade,$bairro,$opcao,$hora)";
-    $resultado = mysqli_query($conn, $result);
     
-    if(mysqli_affected_rows($conn) != 0){
-                echo "
-                    <script type="text/javascript">
-                        alert("Usuario cadastrado com Sucesso.");
-                    </script>
-                ";    
-            }else{
-                echo "
-                    <script type="text/javascript">
-                        alert("O Usuario não foi cadastrado com Sucesso.");
-                    </script>
-                ";    
-            }
+    echo $cliente; 
+    $result = "INSERT INTO tbpedidos(CLIENTE, PEDIDO, SABOR, DATA, LOCALIZACAO, OPCAO, HORARIO) VALUES ('$cliente',$pedido,$sabor,'$data','$bairro',$opcao,'$hora')";
+    $resultado = mysqli_query($conn, $result);
 ?>
