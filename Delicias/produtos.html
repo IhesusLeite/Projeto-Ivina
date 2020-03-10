@@ -10,61 +10,105 @@
 	padding: 0;
 	background-image: url(t1.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-	background-size: 100% ;
     width: 100%;
     height: 100%;
     
    }
     .menu{
 	  float: right;
-	  background-color: rgb(233, 10, 129);
-	  border-radius: 0px 0px 100px 100px;	
-	  height: 35px;  
-	  
+	  line-height: 100px;
 	}
 	.menu a{
-	  color: white;
-	  padding:15px;
-	  font-size: 20px;  
+	  color: black;
+	  text-transform: uppercase;
+	  text-decoration: none;
+	  padding:10px;
+	  transition: 0.4s;
+	  font-family: montserrat;
+	  font-size: 20px;
+	  outline: none;
 	}
 
+	.show-menu-btn,.hide-menu-btn{
+	  transition: 0.4s;
+	  font-size: 30px;
+	  cursor: pointer;
+	  display: none;
+	}
+	.show-menu-btn{
+	  float: right;
+	}
+	.show-menu-btn i{
+	  line-height: 100px;
+	}
 	.menu a:hover{
-	  color: rgb(233, 10, 129);
+	  color: #e67e22;
 	  text-decoration: none;
 	}
     @media screen and (max-width:40%) {
 	  .show-menu-btn,.hide-menu-btn{
 	    display: block;
 	  }
-	  .header{
-		height: auto;
+	  .menu{
+	    position: fixed;
+	    width: 100%;
+	    height: 100px;
+
+
+	    right: -100%;
+	    top: 0;
+	    text-align: center;
+
+	    line-height: normal;
+	    transition: 0.7s;
 	  }
-	  
+
 	}
 	.pedido {
     width: 75%;
-    height: auto;
-	background-size: cover;
+    height: 70%;
     border: 2px solid white;
     border-radius: 80px 0px 80px 0px;
     color: #fff;
     background-color:rgba(207, 59, 138, 0.911);
-    top: 50%;
+    top: 55%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    box-sizing: border-box;
     padding: 68px 28px; 
    }
+	.div_teste{
+       width:700px;
+       height:500px;
+       position:absolute;
+       z-index:100;
+       top:50px;
+       margin-left:300px;
+	}
+	#a{
+      margin-left: 10px;
+
+	}
 	
+
    .cliente {
-    
+    border-radius: 50%;
     position: absolute;
     top: -50px;
-    left: 10%;
-   }   
+    left: 112px;
+   }
+
+	
+	
+   
+
+   
    
    .linha{
+	   
 	   background-color: white;
 	   height: 2px;
 	   width: 100%;
@@ -72,27 +116,27 @@
    }
 
    .radio{
-	   
-	   margin-top:25px;
+	   display: inline;
+	   margin-top: 25px;
    }
 
    .valor{
 	   float:left;
 	   height: 50px;
 	   width: 100px;
+	   
    }
 
    .salvar{
-		
-		float: right;
-		
+	   float:right;
    }
+   
+   
 
     .login-form h1{
       text-align: center;
       margin-bottom: 40px;
     }
-
 	#textcad{
 		background-color: white;
 		text-decoration: underline;
@@ -103,23 +147,22 @@
 		
 	</head>
   <body>
-        
-	
-	<form>
+        <div class="header">
+            <ul class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="produtos.html">Pedidos</a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+	</div>
+	<div>
+	<form method="POST" action="cadproduto.php" class="login-form"  >
 	<div class="pedido">
-		<div class="menu">
-			<ul>
-				<a href="index.html">Inicio</a>
-				<a href="produtos.html">Pedidos</a>
-			</ul>
-		</div>
-		<img src="login.png" class="cliente" width="100" height="auto" >
+		<img src="login.png" class="cliente" width="100" height="100" alt="">
 	   <h1>Cadastro de Pedido</h1>
 	   <div class="linha"></div>
-
-	   
-   	
-		<form action="salvar.php" method="POST" class="login-form">	
 		  <div class="form-row">
 
 			<div class="form-group col-md-5">
@@ -156,7 +199,7 @@
 				 </select>
 				</div>
 				<div class="form-group col-md-4">
-				  <label>Data de Entrega</label>
+				  <label>Data de Entrega(opcional)</label>
 				  <input type="date" class="form-control" id="data" name="data" >
 				</div>
 
@@ -165,12 +208,9 @@
 					<input type="time" class="form-control" id="hora" name="hora" >
 				  </div>
 
-				
-		
-		
 				<div class="form-group col-md-2">
 					<label>Quantidade</label>
-					<input  class="form-control input-sm " placeholder="Número" maxlength="2"  name="quant" id="quant" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					<input  class="form-control input-sm " placeholder="Número" maxlength="2" pattern="[0-9]+$" name="quant" id="quant">
 				  </div>
 
 			
@@ -186,7 +226,7 @@
 
 				  <div class="form-group col-md-1">
 					<label>N°</label>
-					<input type="text" class="form-control" id="numero" name="numero" placeholder="N°" maxlength="3" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					<input type="text" class="form-control" id="numero" name="numero" placeholder="N°" maxlength="3" pattern="[0-9]+$">
 				  </div>
 
 				  <div class="form-group col-md-3">
@@ -197,7 +237,7 @@
 					  
 				  <div class="radio">
 				  <div class="form-check">
-					<input  class="form-check-input"type="radio" id="opcao" name="opcao">
+					<input  class="form-check-input"type="radio" id="opcao" name="opcao" value="2">
 					
 					<label >Fazer a Entrega</label>
 					
@@ -205,7 +245,7 @@
 				  </div>
 
 				  <div class="form-check">
-					<input class="form-check-input" type="radio" id="opcao" name="opcao" >
+					<input class="form-check-input" type="radio" id="opcao" name="opcao" value="1">
 					<label class="form-check-label" for="defaultCheck2" id="opcao" name="opcao">
 					  Vem Buscar
 					</label>
@@ -214,15 +254,10 @@
 				</div>
 				  
 		  </div>
-		  <div class="valor">
-			<label>Valor R$</label>
-			<input type="text" class="form-control" id="valor" name="valor" disabled >
-		</div><br>
-
 			<div class="salvar"> 
-				<button type="button" class="btn btn-success" value="Salvar" class="form-control">Confirma pedido</button>
+				<input type="submit" class="btn btn-success" value="Confirma pedido" class="form-control">
 			</div> 
-		 		
+		  </div>		
 		</form>
 	</div>
   </body>

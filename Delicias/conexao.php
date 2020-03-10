@@ -1,8 +1,8 @@
 <?php
-    $servidor = "db4free.net";
-    $usuario = "igaomen";
-    $senha = "ivina123";
-    $dbname = "delicia";
+    $servidor = "127.0.0.1";
+    $usuario = "root";
+    $senha = "";
+    $dbname = "doces";
     
     //Criar a conexao
     $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
