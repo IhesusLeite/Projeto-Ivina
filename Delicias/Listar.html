@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Delicias Da Ivina</title>
+    <style media="screen">
+	
+	body{
+    margin: 0;
+	padding: 0;
+	background-image: url(t1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    
+   }
+    
+   .menu{
+	  float: right;
+	  background-color: rgb(233, 10, 129);
+	  border-radius: 0px 0px 400px 400px;	
+	  height: 10%;
+	  width: 19%;  
+	  text-align: center;
+	  
+	}
+	.menu a{
+	  color: white;
+	  padding:15px;
+	  font-size: 22px;  
+	}
+
+	.menu a:hover{
+	  color: rgb(233, 10, 129);
+	  text-decoration: none;
+	}
+    @media screen and (max-width:40%) {
+	  .show-menu-btn,.hide-menu-btn{
+	    display: block;
+	  }
+	  .header{
+		height: auto;
+	  }
+	  
+	}
+
+	.pedido {
+    width: 98%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 80px 0px 80px 0px;
+    color: #fff;
+    background-color:rgba(207, 59, 138, 0.911);
+    top: 65%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 68px 28px; 
+   }
+
+   .cliente {
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 112px;
+   }
+   
+   .linha{
+	   
+	   background-color: white;
+	   height: 2px;
+	   width: 100%;
+	   top: 5%;
+   }
+
+   .lista{
+	background-color:rgba(207, 59, 138, 0.911);
+   }
+
+	.tabela{
+		text-align: center;
+	}
+
+    </style>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<link  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+		
+	</head>
+  <body>
+	<form>
+        <div class="pedido">
+            <div class="menu">
+				<ul>
+                <a href="index.html">Inicio</a>
+                <a href="produtos.html">Pedidos</a>
+           		 </ul>
+       		 </div>
+	
+	
+	
+		<img src="login.png" class="cliente" width="100" height="100" alt="">
+	   <h1>Lista dos Pedidos</h1>
+	   <table>
+		<div class="container">
+			<div class="tabela">
+			<table>
+				 <thead>
+					
+						<thead>
+						  <tr>
+							<th scope="col">#</th>
+							<th scope="col">Cliente</th>
+							<th scope="col">Pedido</th>
+							<th scope="col">Sabor</th>
+							<th scope="col">Data de entrega</th>
+							<th scope="col">Horrario</th>
+							<th scope="col">Quantidade</th>
+							<th scope="col">Bairro</th>
+							<th scope="col">Preço</th>
+						  </tr>
+				 </thead>
+				 
+				<thead>
+                <?php
+		        include_once 'conexao.php';
+		        $r = mysqli_query($conn , "select * from tbPedidos");
+		        if ($r) {
+			    while ($result = mysqli_fetc($r)){?>
+					 
+						 <td id="ID"><?php echo $result['ID'];?></td>
+                         <td id="CLIENTE"><?php echo $result['CLIENTE'];?></td>
+                         <td id="PEDIDO"><?php echo $result['PEDIDO'];?></td>
+                         <td id="SABOR"><?php echo $result['SABOR'];?></td>
+                         <td id="DATAdata"><?php echo $result['DATA'];?></td>
+                         <td id="HORA"><?php echo $result['HORA'];?></td>
+                         <td id="QUANTIDADE"><?php echo $result['QUANTIDADE'];?></td>
+                         <td id="LOCALIZACAO"><?php echo $result['LOCALIZACAO'];?></td>
+						 <td id="deleta"><a href="excluir.php?id=<?php echo $result['ID'];?>Excluir</td>
+						 <?php 
+						}
+		} ?>
+                </thead>
+	   </table>
+  </body>
+</html>
