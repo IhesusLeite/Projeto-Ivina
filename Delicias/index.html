@@ -1,144 +1,292 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Inicio</title>
-    <style media="screen">
-    *{
-      padding: 0px;
-      text-decoration: none;
-      font-family: montserrat;
-      box-sizing: border-box;
-      background-color:#FEC1E2;
-      margin: 0px;
-    }
-    .menu{
-	  float: right;
-	  line-height: 100px;
-	}
-	.menu a{
-	  color: black;
-	  text-transform: uppercase;
-	  text-decoration: none;
-	  padding:10px;
-	  transition: 0.4s;
-	  font-family: montserrat;
-	  font-size: 20px;
-	  outline: none;
-	}
+<html>
+    <head>
+        <title> Inicio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta charset=UTF-8>
+        
+        <style type="text/css">
+            .body{
+                margin: 0;
+            	padding: 0;
+            }
 
-	.show-menu-btn,.hide-menu-btn{
-	  transition: 0.4s;
-	  font-size: 30px;
-	  cursor: pointer;
-	  display: none;
-	}
-	.show-menu-btn{
-	  float: right;
-	}
-	.show-menu-btn i{
-	  line-height: 100px;
-	}
-	.menu a:hover{
-	  color: #e67e22;
-	  text-decoration: none;
-	}
-    @media screen and (max-width:40%) {
-	  .show-menu-btn,.hide-menu-btn{
-	    display: block;
-	  }
-	  .menu{
-	    position: fixed;
-	    width: 100%;
-	    height: 100px;
+            .menu {
+                height: 18%;
+                padding: 1%;
+                font-size: 30px;
+                
+                
+            }
+                a:hover{
+                    text-decoration: none;
+                    background-color: rgba(207, 59, 138, 0.911);
+                    width: 210px;
+                    height: 70px;
+                    border-radius: 7px;
+                    color: white;
+                    
+                }
+                .lkmenu{
+                    color:  rgba(207, 59, 138, 0.911);
+                    padding: 18px;
+                    float: right;
+                    top: 25px;
+                    
+                }
+                .logo{
+                    width: 140px;
+                    height: 100px;
+                    
+                }
+                li{
+                    display: inline;
+                    margin: 1,1,1,1;
+                    text-align: center;
+                }
 
+                .banner{
+                    background-image: url(banner.jpeg);
+                    width: 100%;
+                    height: 65%;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
 
-	    right: -100%;
-	    top: 0;
-	    text-align: center;
+                .para{
+                    font-family: Bookman, URW Bookman L, serif;                    
+                }
 
-	    line-height: normal;
-	    transition: 0.7s;
-	  }
+                .conteudo1{
+                    background-color: white;
+                    width: 80%;
+                    height: 80%;
+                    margin-left:10%;
+                }
 
-	}
-	.div_teste{
-       width:700px;
-       height:500px;
-       position:absolute;
-       z-index:100;
-       top:50px;
-       margin-left:300px;
-}
-a{
-  text-decoration: none;
-  background-color: none;
-}
-#conteudo{
-    height: 700px;
-    width: 100%;
-    position: absolute;
-    top:80%;
-}
-.cont img{
-    width: 300px;
-    height: 200px;
+                .titulo{
+                    text-align: center;
+                    font-size: 30px;
+                    color: rgb(230, 62, 151);
+                }
+            
+                .cont img{
+                     width: 500px;
+                     height: 400px;
+                     border-radius: 30px;
+                     float: left;
+                    margin-left: 30px;
+                }
+
+                
+
+                
+
+                .cont2 img{
+                     width: 500px;
+                     height: 200px;
+                     border-radius: 30px;
+                     float: left;
+                    margin-left: 30px;
     
-}
-.cont{
-    width: 300px;
-    height: 200px;
-    float: left;
-    position: relative;
-    left:20%;
-    margin-left: 12px;
-}
-#bemvindo{
-    position: absolute;
-	width: 100%;
-	height: 250px;
-	background-color: #302F2F;
-	top: 100px;
-	color: white;
+                }
 
-}
-    </style>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-  </head>
-  <body>
-        <div class="header">
-            <ul class="menu">
-                <a href="index.html">Inicio</a>
-                <a href="produtos.html">Pedidos</a>
-                <a href="Listar.html">lISTAR</a>
-                <label for="chk" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
+                
+
+                .cont3 img{
+                    width: 240px;
+                     height: 170px;
+                     border-radius: 30px;
+                     margin-left: 5px;
+                     float: right;
+                    margin-right: 15px;
+                    margin-top: 30px;
+    
+                }
+
+                .conteudo2{
+                    background-color: white;
+                    width: 74%;
+                    height: 80%;
+                    margin-left:13%;
+                    
+                }
+
+                .cont5 img{
+                     width: 300px;
+                     height: 200px;
+                     border-radius: 30px;
+                     float: left;
+                     margin-top: 30px;
+                     margin-left: 25px;    
+                }
+
+                .titulorodape{
+                    background-color: white;
+                    height: 25%;
+                    width: 74%;
+                    margin-left:13%;
+
+                }
+
+                .rodape{
+                    background-color: rgb(230, 62, 151);
+                    width: 100%;
+                    height: 40%;
+                    
+                }
+
+                .premio{
+                    color: white;
+                    margin-left: 10px;
+                }
+
+                .contato{
+                    color: white;
+                    float: right;
+                    margin-right: 10px;
+                }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="menu">
+
+           
+            <ul>
+                <img src="login.png" class="logo" >
+               <li><a href="index.html" class="lkmenu">Inicio</a></li>
+				<li></li><a href="produtos.html" class="lkmenu">Fazer pedido</a></li>
             </ul>
+             
+            <div class="para">
+             <br><p>Trabalhando des de 2017, fazendo confeites para festa<br> ou pedidos pessoais para adoçar sua vida<br><b>@DeliciasdaIvina </b></p>
+            </div>
         </div>
-    </div>
-    <div id="bemvindo">
-        <h1 align="center" style="background-color: #302F2F;"><em style="background-color: #302F2F;">Seja Bem Vindo...</em></h1><br>
-		<h2 align="center" style="background-color: #302F2F;"><a href="https://www.instagram.com/deliciasdaivina/" style="background-color:#302F2F; color: white;">@ D E L I C I A S D A I V I N A</a><br>Adoçando sua vida desde 2017🍰😋
-      Trabalhamos com uma diversidade de sobremesas para adoçar​ ainda mais suas festas e eventos!</h2>
-		
-	</div>
-    <div id="conteudo">
-      <div class="cont">
-          <img src="">
-          <h2></h2>
-      </div>
-      
-  
-      <div class="cont">
-          <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/e35/75640837_446833689589452_6265012083286306418_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=100&_nc_ohc=7jwfxzzrEPMAX91P1L-&oh=cdfd2fe5d6c2c2a727f9f27219f00109&oe=5E9B2751">	
-          <h2>Bolos de Aniversário</h2>
-      </div>
-  
-      <div class="cont">
-          <img src="img/1.jpg">
-          <h2>Todos os serviços possiveis para você ter um lindo sorriso pro resto da vida</h2>
-      </div>
-  </div>
-  </body>
+
+        <div class="banner">
+            
+        </div>
+
+        <div class="conteudo1">
+
+            <Div class="titulo">
+               <h2><em> Um pouco dos nossos servicos...</em></h2><br>
+            </Div>
+            <div class="cont">
+                <img src="t1.jpg">
+                
+                
+        
+            </div>
+            
+        
+            <div class="cont2">
+                <img src="t1.jpg">	
+                
+            </div>
+        
+            <div class="cont3">
+                <img src="t1.jpg">
+                
+            </div>
+
+            <div class="cont3">
+                <img src="t1.jpg">
+                
+            </div>
+
+        </div>
+        
+
+        <div class="conteudo2">
+            <Div class="titulo">
+                <h2><em> Receitas do Dia...</em></h2>
+             </Div>
+
+             <div class="cont5">
+                <img src="t1.jpg">
+
+                
+                
+            </div>
+        
+            <div class="cont5">
+                <img src="t1.jpg">	
+                
+            </div>
+            
+        
+            <div class="cont5">
+                <img src="t1.jpg">
+               
+            </div>
+
+            <div class="cont5">
+                <img src="t1.jpg">
+               
+            </div>
+
+            <div class="cont5">
+                <img src="t1.jpg">
+               
+            </div>
+
+            <div class="cont5">
+                <img src="t1.jpg">
+               
+            </div>
+
+
+        </div>
+
+        
+
+        <div class="rodape">
+            <div class="titulorodape">
+                
+            </div>
+
+            <div class="premio">
+
+            <tr> 
+                <h1><td>Premios</td>
+               
+            </h1>
+            </tr>
+            <tr> 
+                <td>Melhores do ano de 2018</td><br>
+            </tr>
+
+            <tr> 
+                <td>Melhores do ano de 2019</td><br>
+            </tr>
+            <tr> 
+                <td>Melhores do ano de 2020</td>
+            </tr>
+
+        </div>
+
+        <div class="contato">
+             
+        
+        <tr> 
+            <h1><td>Contatos</td>
+           
+        </h1>
+        </tr>
+        <tr> 
+            <td>Melhores do ano de 2018</td><br>
+        </tr>
+
+        <tr> 
+            <td>Melhores do ano de 2019</td><br>
+        </tr>
+        <tr> 
+            <td>Melhores do ano de 2020</td>
+        </tr>
+        </div>
+
+        
+    </body>
 </html>
